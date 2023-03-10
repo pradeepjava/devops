@@ -42,10 +42,11 @@ WantedBy=multi-user.target
 
 EOT
 
+sudo -i
 systemctl daemon-reload
 systemctl start tomcat
 systemctl enable tomcat
-
+cd /tmp
 git clone -b local-setup https://github.com/devopshydclub/vprofile-project.git
 cd vprofile-project
 mvn install
